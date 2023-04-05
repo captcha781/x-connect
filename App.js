@@ -12,7 +12,8 @@ const App = () => {
 
   const loadFonts = () => {
     Fonts.loadAsync({
-      'Lexend' : require('./assets/fonts/lexend.ttf')
+      'Lexend' : require('./assets/fonts/lexend.ttf'),
+      'Rubik' : require('./assets/fonts/rubik.ttf')
     }).then(() => {
       setFontIsLoaded(true)
     }).catch(err => {
@@ -34,7 +35,6 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <StatusBar barStyle={"dark-content"} backgroundColor={'white'} />
       <IndexRoutes />
     </React.Fragment>
   );

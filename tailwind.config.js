@@ -5,7 +5,12 @@ module.exports = {
     './App.js'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        lexend: 'Lexend',
+        rubik: 'Rubik'
+      }
+    },
   },
   plugins: [],
 }
