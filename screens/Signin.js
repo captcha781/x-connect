@@ -27,7 +27,7 @@ const Signin = ({ navigation }) => {
             <Text className="text-white font-lexend mb-3">Username</Text>
             <View className="rounded-md overflow-hidden relative">
               <TextInput
-                className="w-full rounded-md p-2 text-white font-lexend"
+                className="w-full rounded-full p-2 !px-4 text-white font-lexend"
                 style={{ backgroundColor: "rgba(255,255,255,0.35)" }}
               />
             </View>
@@ -37,7 +37,7 @@ const Signin = ({ navigation }) => {
             <View className="rounded-md overflow-hidden">
               <View blurType="light" blurAmount={10}>
                 <TextInput
-                  className="w-full rounded-md p-2 text-white font-lexend"
+                  className="w-full rounded-full p-2 !px-4 text-white font-lexend"
                   style={{ backgroundColor: "rgba(255,255,255,0.35)" }}
                   secureTextEntry
                 />
@@ -46,7 +46,7 @@ const Signin = ({ navigation }) => {
           </View>
           <View className="w-full mb-3 overflow-hidden rounded-md">
             <Pressable
-              className="bg-purple-500 rounded-md py-3 border-[1px] border-purple-500 active:bg-transparent"
+              className="w-full bg-violet-700 py-3 rounded-full border-[1px] border-violet-700 active:bg-whitez"
               onPressIn={() => effectToggle("submit")}
               onPressOut={() => effectToggle("submit")}
             >

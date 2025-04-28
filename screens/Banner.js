@@ -27,20 +27,16 @@ const Banner = ({ navigation }) => {
         <View className="w-full p-5 pb-10 rounded-t-xl bg-white">
           <View className="mb-6">
             <Text className="font-lexend font-semibold text-2xl">
-              XConnect Wallet
+              Square Pulse
             </Text>
           </View>
           <View className="mb-6">
             <Text className="font-lexend">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              consectetur imperdiet augue, vel fringilla nisl efficitur in. In
-              cursus felis eu sollicitudin sodales. Curabitur sit amet ultricies
-              tortor, sit amet porttitor mauris.Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. In consectetur imperdiet augue.
+              Square Pulse's exclusive mobile application for punch in services.
             </Text>
           </View>
           <View className="w-full flex-row">
-            <Pressable
+            {/* <Pressable
               className="w-1/2 bg-violet-800 py-3 rounded-full -ml-1 border-[1px] border-violet-800 active:bg-white"
               onPressIn={() => effectToggle("up")}
               onPressOut={() => effectToggle("up")}
@@ -53,9 +49,9 @@ const Banner = ({ navigation }) => {
               >
                 Sign up
               </Text>
-            </Pressable>
+            </Pressable> */}
             <Pressable
-              className="w-1/2 bg-violet-800 py-3 rounded-full border-[1px] border-violet-800 active:bg-white ml-1"
+              className="w-full bg-violet-800 py-3 rounded-full border-[1px] border-violet-800 active:bg-white"
               onPressIn={() => effectToggle("in")}
               onPressOut={() => effectToggle("in")}
               onPress={() => navigation.navigate("Signin")}

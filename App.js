@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React, { useEffect, useState } from "react";
 import IndexRoutes from "./routes/Index.routes";
-import { StatusBar, Text, ToastAndroid, View } from "react-native";
+import { ActivityIndicator, StatusBar, Text, ToastAndroid, View } from "react-native";
 import * as Fonts from 'expo-font'
 
 
@@ -28,7 +28,7 @@ const App = () => {
   if(!isFontLoaded){
     return <React.Fragment>
       <View className="flex-1 justify-center items-center">
-        <Text>Fonts Loading !!!</Text>
+        <ActivityIndicator size="large" color="#0000ff" />
       </View>
     </React.Fragment>
   }
