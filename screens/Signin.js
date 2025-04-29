@@ -1,15 +1,44 @@
-import { View, Text, Button, ImageBackground, Pressable, KeyboardAvoidingView } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  ImageBackground,
+  Pressable,
+  KeyboardAvoidingView,
+} from "react-native";
 import React, { useState } from "react";
 import { TextInput } from "react-native-gesture-handler";
 import { BlurView } from "@react-native-community/blur";
 import SafeAreaView from "react-native-safe-area-view";
+import * as yup from "yup";
+import { useFormik } from "formik";
+
+const initialState = {
+  email: "",
+  password: "",
+};
+
+const validationSchema = yup.object({
+  email: yup.string().email("Invalid email").required("Email is required"),
+  password: yup
+    .string()
+    .required("Password is required")
+    .min(6, "Password must be at least 6 characters long"),
+});
 
 const Signin = ({ navigation }) => {
   const [btns, setBtns] = useState({ submit: false });
+  const {} = useFormik({
+    initialValues: initialState,
+    validationSchema: validationSchema,
+    onSubmit: handleSubmit,
+  });
 
   const effectToggle = (id) => {
     return setBtns({ ...btns, [id]: !btns[id] });
   };
+
+  function handleSubmit(values, { setErrors, setStatus }) {}
 
   return (
     <View className="flex-1 justify-center items-center bg-purple-400">

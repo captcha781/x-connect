@@ -5,6 +5,12 @@ const initialState = {
   password: "",
   isLogin: false,
   accessToken: "",
+  profileInfo: {
+    name: "",
+    designation: "",
+    profileImage: "",
+    companyRoleNumber: "",
+  },
 };
 
 const infoSlice = createSlice({
@@ -19,6 +25,11 @@ const infoSlice = createSlice({
     },
     updateLogin: (state, action) => {
       state.isLogin = action.payload.isLogin;
+      state.accessToken = action.payload.token;
+
+      return state;
+    },
+    updateToken: (state, action) => {
       state.accessToken = action.payload.token;
 
       return state;
@@ -39,6 +50,6 @@ const infoSlice = createSlice({
   },
 });
 
-export const { updateCredentials, updateLogin, resetToken, logout } =
+export const { updateCredentials, updateLogin, resetToken, logout, updateToken } =
   infoSlice.actions;
 export default infoSlice.reducer;
